@@ -21,7 +21,7 @@ public class UserController
 
     @PostMapping("login")
     public JsonData login(@RequestBody User user){
-        String token = userService.login(user.getUsername(),user.getPwd());
+        String token = userService.login(user.getUsername(),user.getPwd());  // 调用userService接口的login方法
         return token !=null ?JsonData.buildSuccess(token):JsonData.buildError("账号密码错误");
     }
 }

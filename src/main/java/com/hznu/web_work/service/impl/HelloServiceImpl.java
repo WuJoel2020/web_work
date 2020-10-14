@@ -17,9 +17,10 @@ public class HelloServiceImpl implements HelloService
     @Autowired
     public void setHelloMapper(HelloMapper helloMapper)
     {
-        this.helloMapper = helloMapper;
+        this.helloMapper = helloMapper;  // 使用this来代指HelloServiceImpl类。
     }
 
+    // 实现listHello()方法，通过注入了一个helloMapper类，然后调用里面的listHello()方法。
     @Override
     public List<Hello> listHello()
     {

@@ -19,9 +19,10 @@ public class JsonData
         this.msg = msg;
     }
 
+    // 将数据通过Json的格式返回
     public static JsonData buildSuccess(Object data)
     {
-        return new JsonData(0, data);
+        return new JsonData(0, data,"这是通过Json返回的数据");
     }
 
     public static JsonData buildError(String msg)

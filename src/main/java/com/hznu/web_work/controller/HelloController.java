@@ -16,16 +16,18 @@ public class HelloController
 {
     private HelloService helloService;
 
+    // 首先注入helloService这个对象
     @Autowired
     public void setHelloService(HelloService helloService)
     {
         this.helloService = helloService;
     }
 
+    // 调用helloService这个接口的listHello()方法
     @GetMapping("list")
     public JsonData List()
     {
         List<Hello> list = helloService.listHello();
-        return JsonData.buildSuccess(list);
+        return JsonData.buildSuccess(list);  // 这里返回了一个Java对象，但是由于@ResponseBody注解，转换成了Json格式。
     }
 }
