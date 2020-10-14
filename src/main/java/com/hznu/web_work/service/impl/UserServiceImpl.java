@@ -1,7 +1,6 @@
 package com.hznu.web_work.service.impl;
 
 import com.hznu.web_work.domain.User;
-import com.hznu.web_work.mapper.HelloMapper;
 import com.hznu.web_work.mapper.UserMapper;
 import com.hznu.web_work.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,7 @@ import java.util.UUID;
 @Service
 public class UserServiceImpl implements UserService
 {
-    private static Map<String, User> sessionMap = new HashMap<>();
+    private static final Map<String, User> sessionMap = new HashMap<>();
 
     private UserMapper userMapper;
 
