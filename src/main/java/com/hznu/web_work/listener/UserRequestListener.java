@@ -1,20 +1,20 @@
 package com.hznu.web_work.listener;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
+import javax.servlet.ServletRequestEvent;
+import javax.servlet.ServletRequestListener;
 import javax.servlet.annotation.WebListener;
 
 @WebListener
-public class UserRequestListener implements ServletContextListener
+public class UserRequestListener implements ServletRequestListener
 {
     @Override
-    public void contextInitialized(ServletContextEvent sce)
+    public void requestInitialized(ServletRequestEvent sce)
     {
         System.out.println("=====request Initialized=====");
     }
 
     @Override
-    public void contextDestroyed(ServletContextEvent sce)
+    public void requestDestroyed(ServletRequestEvent sce)
     {
         System.out.println("=====request Destroyed=====");
     }

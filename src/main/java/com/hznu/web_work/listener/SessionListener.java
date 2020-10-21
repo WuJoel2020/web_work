@@ -1,8 +1,8 @@
 package com.hznu.web_work.listener;
 
-import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
+import javax.servlet.annotation.WebListener;
 
 @WebListener
 public class SessionListener implements HttpSessionListener
