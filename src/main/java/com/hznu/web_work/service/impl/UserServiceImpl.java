@@ -13,7 +13,8 @@ import java.util.UUID;
 @Service
 public class UserServiceImpl implements UserService
 {
-    private static final Map<String, User> sessionMap = new HashMap<>();
+    // 这里改成了public
+    public static final Map<String, User> sessionMap = new HashMap<>();
 
     private UserMapper userMapper;
 

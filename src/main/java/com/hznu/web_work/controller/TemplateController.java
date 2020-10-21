@@ -12,6 +12,7 @@ public class TemplateController
     @GetMapping("list")
     public String index(ModelMap modelMap)
     {
+        int i = 9 / 0;
         modelMap.addAttribute("hello", "world");  // 在html中通过hello获取world
         return "index";
     }

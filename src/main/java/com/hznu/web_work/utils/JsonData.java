@@ -22,12 +22,17 @@ public class JsonData
     // 将数据通过Json的格式返回
     public static JsonData buildSuccess(Object data)
     {
-        return new JsonData(0, data,"这是通过Json返回的数据");
+        return new JsonData(0, data, "这是通过Json返回的数据");
     }
 
     public static JsonData buildError(String msg)
     {
         return new JsonData(-1, "", msg);
+    }
+
+    public static JsonData buildError(String msg, int code)
+    {
+        return new JsonData(code, "", msg);
     }
 
     public int getCode()
