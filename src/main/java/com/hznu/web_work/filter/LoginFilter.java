@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-// @WebFilter(urlPatterns = "/api/v1/pri/*", filterName = "loginFilter")
+@WebFilter(urlPatterns = "/api/v1/pri/*", filterName = "loginFilter")
 public class LoginFilter implements Filter
 {
     private final ObjectMapper objectMapper = new ObjectMapper();
@@ -59,7 +59,7 @@ public class LoginFilter implements Filter
             User user = UserServiceImpl.sessionMap.get(token);
             if (user != null)
             {
-                filterChain.doFilter(servletRequest, servletResponse);
+                filterChain.doFilter(servletRequest, servletResponse);  // 可以通过过滤器
             }
             else
             {

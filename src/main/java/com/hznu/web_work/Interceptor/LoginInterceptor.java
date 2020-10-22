@@ -42,7 +42,7 @@ public class LoginInterceptor implements HandlerInterceptor
             if(user!=null){
                 return true;
             }else{
-                JsonData jsonData = JsonData.buildError("登录失败，token无效",-2);
+                JsonData jsonData = JsonData.buildError("（拦截器）登录失败，token无效",-2);
                 String jsonStr = objectMapper.writeValueAsString(jsonData);
                 renderJson(response,jsonStr);
                 return false;
